@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		EBECD95A28CF820A001D8BBA /* MoneyMatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD95928CF820A001D8BBA /* MoneyMatchApp.swift */; };
-		EBECD95C28CF820A001D8BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD95B28CF820A001D8BBA /* ContentView.swift */; };
+		EBECD95C28CF820A001D8BBA /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD95B28CF820A001D8BBA /* MainMenuView.swift */; };
 		EBECD95E28CF820C001D8BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBECD95D28CF820C001D8BBA /* Assets.xcassets */; };
 		EBECD96128CF820C001D8BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBECD96028CF820C001D8BBA /* Preview Assets.xcassets */; };
+		EBECD96928CF825C001D8BBA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD96828CF825C001D8BBA /* ProfileView.swift */; };
+		EBECD96B28CF8289001D8BBA /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD96A28CF8289001D8BBA /* LevelsView.swift */; };
+		EBECD96D28CF82A0001D8BBA /* SituationalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD96C28CF82A0001D8BBA /* SituationalView.swift */; };
+		EBECD96F28CF82E5001D8BBA /* ProfileColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD96E28CF82E5001D8BBA /* ProfileColorsView.swift */; };
+		EBECD97128CF82F3001D8BBA /* ProfileCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD97028CF82F3001D8BBA /* ProfileCharacterView.swift */; };
+		EBECD97328CF8326001D8BBA /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD97228CF8326001D8BBA /* CorrectView.swift */; };
+		EBECD97528CF8336001D8BBA /* IncorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD97428CF8336001D8BBA /* IncorrectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBECD95628CF820A001D8BBA /* MoneyMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBECD95928CF820A001D8BBA /* MoneyMatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyMatchApp.swift; sourceTree = "<group>"; };
-		EBECD95B28CF820A001D8BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EBECD95B28CF820A001D8BBA /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		EBECD95D28CF820C001D8BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBECD96028CF820C001D8BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBECD96828CF825C001D8BBA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EBECD96A28CF8289001D8BBA /* LevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
+		EBECD96C28CF82A0001D8BBA /* SituationalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationalView.swift; sourceTree = "<group>"; };
+		EBECD96E28CF82E5001D8BBA /* ProfileColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileColorsView.swift; sourceTree = "<group>"; };
+		EBECD97028CF82F3001D8BBA /* ProfileCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCharacterView.swift; sourceTree = "<group>"; };
+		EBECD97228CF8326001D8BBA /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
+		EBECD97428CF8336001D8BBA /* IncorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,8 @@
 		EBECD95828CF820A001D8BBA /* MoneyMatch */ = {
 			isa = PBXGroup;
 			children = (
+				EBECD96728CF8240001D8BBA /* Views */,
 				EBECD95928CF820A001D8BBA /* MoneyMatchApp.swift */,
-				EBECD95B28CF820A001D8BBA /* ContentView.swift */,
 				EBECD95D28CF820C001D8BBA /* Assets.xcassets */,
 				EBECD95F28CF820C001D8BBA /* Preview Content */,
 			);
@@ -65,6 +79,21 @@
 				EBECD96028CF820C001D8BBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBECD96728CF8240001D8BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBECD95B28CF820A001D8BBA /* MainMenuView.swift */,
+				EBECD96A28CF8289001D8BBA /* LevelsView.swift */,
+				EBECD96C28CF82A0001D8BBA /* SituationalView.swift */,
+				EBECD96828CF825C001D8BBA /* ProfileView.swift */,
+				EBECD96E28CF82E5001D8BBA /* ProfileColorsView.swift */,
+				EBECD97028CF82F3001D8BBA /* ProfileCharacterView.swift */,
+				EBECD97228CF8326001D8BBA /* CorrectView.swift */,
+				EBECD97428CF8336001D8BBA /* IncorrectView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBECD95C28CF820A001D8BBA /* ContentView.swift in Sources */,
+				EBECD95C28CF820A001D8BBA /* MainMenuView.swift in Sources */,
+				EBECD97328CF8326001D8BBA /* CorrectView.swift in Sources */,
+				EBECD96D28CF82A0001D8BBA /* SituationalView.swift in Sources */,
+				EBECD96B28CF8289001D8BBA /* LevelsView.swift in Sources */,
+				EBECD96928CF825C001D8BBA /* ProfileView.swift in Sources */,
+				EBECD96F28CF82E5001D8BBA /* ProfileColorsView.swift in Sources */,
+				EBECD97128CF82F3001D8BBA /* ProfileCharacterView.swift in Sources */,
+				EBECD97528CF8336001D8BBA /* IncorrectView.swift in Sources */,
 				EBECD95A28CF820A001D8BBA /* MoneyMatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
