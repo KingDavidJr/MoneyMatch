@@ -13,9 +13,24 @@ struct SituationalView: View {
             Color("DefaultBackgroundColor")
                 .ignoresSafeArea()
             VStack {
+                HStack() {
+                    Button {
+                        
+                    } label: {
+                        Spacer()
+                        Image("ResetButton")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .padding(.horizontal, 30.0)
+                            
+                    }
+                }
+                Spacer()
                 Text("Level 2")
                     .font(.title)
                 .foregroundColor(.white)
+                Spacer(minLength: 680)
                 
             }
         }
