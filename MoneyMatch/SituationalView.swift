@@ -13,7 +13,7 @@ struct SituationalView: View {
             Color("DefaultBackgroundColor")
                 .ignoresSafeArea()
             VStack {
-                HStack() {
+                HStack {
                     Button {
                         
                     } label: {
@@ -23,6 +23,26 @@ struct SituationalView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 40, height: 40)
                             .padding(.horizontal, 30.0)
+                            .offset(y: 20)
+                            .background(
+                                Rectangle()
+                                    .fill(Color("DefaultBackgroundColor"))
+                                    .frame(minWidth: 800, idealWidth: 1000, maxWidth: 1500, minHeight: 150, idealHeight: 200, maxHeight: 300)
+                                    .shadow(color: .black, radius: 10)
+                            )
+                            .overlay(
+                                Rectangle()
+                                    .fill(Color("TimerColor"))
+                                    .frame(minWidth: 800,
+                                          idealWidth: 1000,
+                                          maxWidth: 1500,
+                                          minHeight: 4,
+                                          idealHeight: 5,
+                                          maxHeight: 6)
+                                    .offset(y: 78)
+                            )
+    
+                            
                             
                     }
                 }
@@ -30,7 +50,7 @@ struct SituationalView: View {
                 Text("Level 2")
                     .font(.title)
                 .foregroundColor(.white)
-                Spacer(minLength: 680)
+                Spacer(minLength: 750)
                 
             }
         }
