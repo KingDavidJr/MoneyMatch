@@ -8,22 +8,14 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var name:String = "Daniel"
     var body: some View {
         let name = "Daniel"
         ZStack() {
             Color("DefaultBackgroundColor")
                 .ignoresSafeArea()
             VStack(spacing: 50) {
-                Text("Profile")
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .foregroundColor(.white)
-                
-                
-                Text("Hi \(name)!")
-                    .font(.title)
-                    .fontWeight(.light)
-                    .foregroundColor(.white)
+                HeaderView(name: $name)
                 
                 
                 ProfileCircleView()
@@ -50,6 +42,7 @@ struct ProfileView_Previews: PreviewProvider {
 }
 
 struct ProfileCircleView: View {
+    // Replace this with an image and do clippedCircle()
     var body: some View {
         ZStack {
             Circle()
@@ -115,6 +108,24 @@ struct ButtonView: View {
                                    maxHeight: 60)
                     )
             })
+        }
+    }
+}
+
+struct HeaderView: View {
+    @Binding var name:String
+    var body: some View {
+        VStack(spacing: 50) {
+            Text("Profile")
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundColor(.white)
+            
+            
+            Text("Hi \(name)!")
+                .font(.title)
+                .fontWeight(.light)
+                .foregroundColor(.white)
         }
     }
 }
