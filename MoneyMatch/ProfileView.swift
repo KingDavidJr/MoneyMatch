@@ -8,30 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var name:String = "Daniel"
+    @State var isShowing: Bool = false
     var body: some View {
-        ZStack() {
-            Color("DefaultBackgroundColor")
-                .ignoresSafeArea()
-            VStack(spacing: 50) {
-                HeaderView(name: $name)
-                
-                
-                ProfileCircleView()
-                
-//                Link("View Our Terms of Service",
-//                      destination: URL(string: "https://www.depaul.edu")!)
-                
-                
-                Text("Options!")
-                    .font(.title)
-                    .fontWeight(.light)
-                    .foregroundColor(.white)
-                    .underline()
-                
-                ButtonView()
-            }
-            
+        if isShowing {
+            ProfileColorsView()
+        } else {
+            MainProfileView(isShwoing: $isShowing)
         }
     }
 }
@@ -39,6 +21,35 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+    }
+}
+
+struct MainProfileView: View {
+    @State private var name:String = "Daniel"
+    @Binding var isShwoing: Bool
+    var body: some View {
+        ZStack() {
+                Color("DefaultBackgroundColor")
+                    .ignoresSafeArea()
+                VStack(spacing: 50) {
+                    HeaderView(name: $name)
+                    
+                    
+                    ProfileCircleView()
+                    
+                    //                Link("View Our Terms of Service",
+                    //                      destination: URL(string: "https://www.depaul.edu")!)
+                    
+                    
+                    Text("Options!")
+                        .font(.title)
+                        .fontWeight(.light)
+                        .foregroundColor(.white)
+                        .underline()
+                    
+                    ButtonView(isShowing: $isShwoing)
+            }
+        }
     }
 }
 
@@ -59,6 +70,7 @@ struct ProfileCircleView: View {
 }
 
 struct ButtonView: View {
+    @Binding var isShowing:Bool
     var body: some View {
         VStack(spacing: 40) {
             Button(action: {
@@ -78,7 +90,9 @@ struct ButtonView: View {
                     )
             })
             Button(action: {
-                
+                if !isShowing {
+                    isShowing.toggle()
+                }
             }, label: {
                 Text("Colors")
                     .foregroundColor(.white)

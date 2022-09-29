@@ -10,7 +10,7 @@ import SwiftUI
 struct SituationalView: View {
     var body: some View {
         ZStack {
-            Color("DefaultBackgroundColor")
+            ProfileColorsView().backgroundColor
                 .ignoresSafeArea()
             VStack {
                 HStack {
