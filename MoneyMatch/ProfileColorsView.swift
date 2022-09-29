@@ -7,32 +7,48 @@
 
 import SwiftUI
 
+struct colorOptions1: Identifiable {
+    let id: String = UUID().uuidString
+    let color: Color
+}
+
+struct colorOptions2: Identifiable {
+    let id: String = UUID().uuidString
+    let color: Color
+}
+
+struct colorOptions3: Identifiable {
+    let id: String = UUID().uuidString
+    let color: Color
+}
+
 struct ProfileColorsView: View {
     @State var name:String = "Daniel"
     @State var count:Int = 0
     @State var backgroundColor:Color = Color("DefaultBackgroundColor")
     
-    let buttonWidth = 85.0
-    let buttonHeight = 50.0
+    let colors: [colorOptions1] = [
+        colorOptions1(color: Color("RedBackgroundColor")),
+        colorOptions1(color: Color("OrangeBackgroundColor")),
+        colorOptions1(color: Color("YellowBackgroundColor")),
+    ]
     
-    enum colorButtonEnums {
-        case red,orange,yellow,green,blue,indigo,purple,pink,lightDark
-    }
+    let colors2: [colorOptions2] = [
+        colorOptions2(color: Color("GreenBackgroundColor")),
+        colorOptions2(color: Color("DefaultBackgroundColor")),
+        colorOptions2(color: Color("IndigoBackgroundColor")),
+    ]
     
-    private let listOfColors:[String : Color] = [
-        "redColor" : Color("RedBackgroundColor"),
-        "orangeColor" : Color("OrangeBackgroundColor"),
-        "yellowColor" : Color("YellowBackgroundColor"),
-        "greenColor" : Color("GreenBackgroundColor"),
-        "blueColor" : Color("DefaultBackgroundColor"),
-        "purpleColor" : Color("PurpleBackgroundColor"),
-        "indigoColor" : Color("IndigoBackgroundColor")
+    let colors3: [colorOptions3] = [
+        colorOptions3(color: Color("PurpleBackgroundColor")),
+        colorOptions3(color: Color("PinkBackgroundColor")),
+        colorOptions3(color: Color("LightDarkBackgroundColor")),
     ]
     
     var body: some View {
         ZStack {
-            listOfColors["blueColor"]
-                .ignoresSafeArea()
+                backgroundColor
+                    .ignoresSafeArea()
             VStack(spacing: 50) {
                 HeaderView(name: $name)
                 ProfileCircleView()
@@ -43,12 +59,52 @@ struct ProfileColorsView: View {
                 
                 VStack(spacing: 30) {
                     HStack(spacing: 20){
-                        
-                            
+                        ForEach(colors) { typeColor in
+                            VStack {
+                                HStack {
+                                    Button {
+                                        colorChanger(color: typeColor.color)
+                                    } label: {
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .strokeBorder(Color.white, lineWidth: 4)
+                                            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(typeColor.color))
+                                            .frame(width: 50, height: 40)
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                    HStack(spacing: 20){
+                        ForEach(colors2) { typeColor in
+                            Button {
+                                colorChanger(color: typeColor.color)
+                            } label: {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .strokeBorder(Color.white, lineWidth: 4)
+                                    .background(RoundedRectangle(cornerRadius: 10).foregroundColor(typeColor.color))
+                                    .frame(width: 50, height: 40)
+                            }
+                        }
+                    }
+                    HStack(spacing: 20){
+                        ForEach(colors3) { typeColor in
+                            Button {
+                                colorChanger(color: typeColor.color)
+                            } label: {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .strokeBorder(Color.white, lineWidth: 4)
+                                    .background(RoundedRectangle(cornerRadius: 10).foregroundColor(typeColor.color))
+                                    .frame(width: 50, height: 40)
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+    func colorChanger(color: Color) {
+        backgroundColor = color
     }
 }
 
