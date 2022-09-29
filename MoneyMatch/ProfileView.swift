@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var name:String = "Daniel"
+    @State private var name:String = "Daniel"
     var body: some View {
-        let name = "Daniel"
         ZStack() {
             Color("DefaultBackgroundColor")
                 .ignoresSafeArea()
@@ -20,6 +19,9 @@ struct ProfileView: View {
                 
                 ProfileCircleView()
                 
+//                Link("View Our Terms of Service",
+//                      destination: URL(string: "https://www.depaul.edu")!)
+                
                 
                 Text("Options!")
                     .font(.title)
@@ -28,7 +30,6 @@ struct ProfileView: View {
                     .underline()
                 
                 ButtonView()
-                //Spacer()
             }
             
         }
@@ -93,7 +94,7 @@ struct ButtonView: View {
                     )
             })
             Button(action: {
-                
+    
             }, label: {
                 Text("Settings")
                     .foregroundColor(.white)
