@@ -41,8 +41,11 @@ import Foundation
         }
     }
     
-    func checkValue(level: Level.ID) {
-        
+    func checkValue(level: Level) -> Bool{
+        if currentValue == level.itemPrice {
+            return true
+        }
+        return false
     }
     
     func resetValue() {
