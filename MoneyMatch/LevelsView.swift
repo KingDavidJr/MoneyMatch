@@ -13,7 +13,7 @@ struct LevelsView: View {
         NavigationStack {
             ForEach(LevelHelper.levelsExample) { level in
                 NavigationLink(destination: SituationView(level: level).environmentObject(situationViewModel)) {
-                    
+                    LevelCardView(level: level)
                 }
             }
         }
