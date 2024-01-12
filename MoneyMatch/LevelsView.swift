@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct LevelsView: View {
+    @EnvironmentObject var situationViewModel: SituationViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ForEach(LevelHelper.levelsExample) { level in
+                NavigationLink(destination: SituationView(level: level).environmentObject(situationViewModel)) {
+                    
+                }
+            }
+        }
     }
 }
 
 #Preview {
     LevelsView()
+        .environmentObject(SituationViewModel.shared)
 }
