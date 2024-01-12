@@ -8,11 +8,53 @@
 import SwiftUI
 
 struct ButtonsView: View {
+    @EnvironmentObject var situationViewModel: SituationViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button(action: {
+                    situationViewModel.addValue(of: .oneDollarBill)
+                }, label: {
+                    Image(.dollar)
+                })
+                
+                Button(action: {
+                    situationViewModel.addValue(of: .fiveDollarBill)
+                }, label: {
+                    Image(.fiveDollar)
+                })
+            }
+            HStack {
+                Button(action: {
+                    situationViewModel.addValue(of: .tenDollarBill)
+                }, label: {
+                    Image(.tenDollar)
+                })
+                
+                Button(action: {
+                    situationViewModel.addValue(of: .twentyDollarBill)
+                }, label: {
+                    Image(.twentyDollar)
+                })
+            }
+            HStack {
+                Button(action: {
+                    situationViewModel.addValue(of: .fiftyDollarBill)
+                }, label: {
+                    Image(.fiftyDollar)
+                })
+                
+                Button(action: {
+                    situationViewModel.addValue(of: .hundredDollarBill)
+                }, label: {
+                    Image(.hundredDollar)
+                })
+            }
+        }
     }
 }
 
 #Preview {
     ButtonsView()
+        .environmentObject(SituationViewModel.shared)
 }
