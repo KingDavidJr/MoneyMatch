@@ -17,6 +17,7 @@
 		EB091DE72B51B9A200C72BB0 /* SituationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DE62B51B9A200C72BB0 /* SituationView.swift */; };
 		EB091DE92B51BC8100C72BB0 /* SituationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DE82B51BC8100C72BB0 /* SituationViewModel.swift */; };
 		EB091DEB2B51C2EF00C72BB0 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DEA2B51C2EF00C72BB0 /* ButtonsView.swift */; };
+		EB091DED2B51CDEF00C72BB0 /* LevelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DEC2B51CDEF00C72BB0 /* LevelCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		EB091DE62B51B9A200C72BB0 /* SituationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationView.swift; sourceTree = "<group>"; };
 		EB091DE82B51BC8100C72BB0 /* SituationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationViewModel.swift; sourceTree = "<group>"; };
 		EB091DEA2B51C2EF00C72BB0 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		EB091DEC2B51CDEF00C72BB0 /* LevelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				EB091DE02B51B90D00C72BB0 /* Money.swift */,
 				EB091DE22B51B92B00C72BB0 /* Level.swift */,
 				EB091DE42B51B93F00C72BB0 /* LevelsView.swift */,
+				EB091DEC2B51CDEF00C72BB0 /* LevelCardView.swift */,
 				EB091DE62B51B9A200C72BB0 /* SituationView.swift */,
 				EB091DEA2B51C2EF00C72BB0 /* ButtonsView.swift */,
 			);
@@ -159,6 +162,7 @@
 				EB091DE92B51BC8100C72BB0 /* SituationViewModel.swift in Sources */,
 				EB091DE72B51B9A200C72BB0 /* SituationView.swift in Sources */,
 				EB091DD52B51B8C400C72BB0 /* ContentView.swift in Sources */,
+				EB091DED2B51CDEF00C72BB0 /* LevelCardView.swift in Sources */,
 				EB091DE32B51B92B00C72BB0 /* Level.swift in Sources */,
 				EB091DE52B51B93F00C72BB0 /* LevelsView.swift in Sources */,
 				EB091DEB2B51C2EF00C72BB0 /* ButtonsView.swift in Sources */,
