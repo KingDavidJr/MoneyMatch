@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct SituationView: View {
+    @EnvironmentObject var situationViewModel: SituationViewModel
+    let level: Level
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Target Value \(level.itemPrice)")
+            Text("Value \(situationViewModel.currentValue)")
+            ButtonsView()
+                .environmentObject(situationViewModel)
+            Button(action: {
+                situationViewModel.resetValue()
+            }, label: {
+                Text("Clear")
+            })
+        }
     }
 }
 
 #Preview {
-    SituationView()
+    SituationView(level: Level(id: 1, itemName: "toy", itemPrice: 23.0))
+        .environmentObject(SituationViewModel.shared)
 }
