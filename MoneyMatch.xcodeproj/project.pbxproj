@@ -16,6 +16,7 @@
 		EB091DE52B51B93F00C72BB0 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DE42B51B93F00C72BB0 /* LevelsView.swift */; };
 		EB091DE72B51B9A200C72BB0 /* SituationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DE62B51B9A200C72BB0 /* SituationView.swift */; };
 		EB091DE92B51BC8100C72BB0 /* SituationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DE82B51BC8100C72BB0 /* SituationViewModel.swift */; };
+		EB091DEB2B51C2EF00C72BB0 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB091DEA2B51C2EF00C72BB0 /* ButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		EB091DE42B51B93F00C72BB0 /* LevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
 		EB091DE62B51B9A200C72BB0 /* SituationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationView.swift; sourceTree = "<group>"; };
 		EB091DE82B51BC8100C72BB0 /* SituationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationViewModel.swift; sourceTree = "<group>"; };
+		EB091DEA2B51C2EF00C72BB0 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				EB091DE22B51B92B00C72BB0 /* Level.swift */,
 				EB091DE42B51B93F00C72BB0 /* LevelsView.swift */,
 				EB091DE62B51B9A200C72BB0 /* SituationView.swift */,
+				EB091DEA2B51C2EF00C72BB0 /* ButtonsView.swift */,
 			);
 			path = MoneyMatch;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				EB091DD52B51B8C400C72BB0 /* ContentView.swift in Sources */,
 				EB091DE32B51B92B00C72BB0 /* Level.swift in Sources */,
 				EB091DE52B51B93F00C72BB0 /* LevelsView.swift in Sources */,
+				EB091DEB2B51C2EF00C72BB0 /* ButtonsView.swift in Sources */,
 				EB091DD32B51B8C400C72BB0 /* MoneyMatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
