@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var situationViewModel = SituationViewModel.shared
+    @State private var isLoaded = true
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if isLoaded {
+            LevelsView()
+                .environmentObject(situationViewModel)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(SituationViewModel.shared)
 }
